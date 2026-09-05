@@ -12,11 +12,11 @@ soong_namespace {
 }
 
 cc_binary {
-    name: "android.hardware.power-service.lineage-libperfmgr",
+    name: "android.hardware.power-service.xiaomi-libperfmgr",
     defaults: ["android.hardware.power-ndk_shared"],
     relative_install_path: "hw",
-    init_rc: ["aidl/android.hardware.power-service.lineage-libperfmgr.rc"],
-    vintf_fragments: ["aidl/android.hardware.power-service.lineage.xml"],
+    init_rc: ["aidl/android.hardware.power-service.xiaomi-libperfmgr.rc"],
+    vintf_fragments: ["aidl/android.hardware.power-service.xiaomi.xml"],
     vendor: true,
     cflags: [
         "-Wno-unused-variable",

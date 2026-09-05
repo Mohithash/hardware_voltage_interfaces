@@ -80,7 +80,7 @@
     </hal>
     <!-- Touch -->
     <hal format="aidl" optional="true">
-        <name>vendor.lineage.touch</name>
+        <name>vendor.bestrom.touch</name>
         <version>1</version>
         <interface>
             <name>IGloveMode</name>
