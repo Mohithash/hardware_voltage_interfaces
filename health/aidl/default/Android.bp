@@ -54,11 +54,14 @@ cc_binary {
 }
 
 cc_binary {
-    name: "vendor.lineage.health-service.default",
+    // Binary path is bestrom so vendor_file_contexts has no "lineage"
+    // string (DD vendor-policy hits). AIDL package stays vendor.lineage.health
+    // until frameworks are renamed; service_contexts still lists that name.
+    name: "vendor.bestrom.health-service.default",
     vendor: true,
     relative_install_path: "hw",
-    init_rc: ["vendor.lineage.health-service.default.rc"],
-    vintf_fragments: ["vendor.lineage.health-service.default.xml"],
+    init_rc: ["vendor.bestrom.health-service.default.rc"],
+    vintf_fragments: ["vendor.bestrom.health-service.default.xml"],
     cflags: select(soong_config_variable("lineage_health", "charging_control_charging_path"), {
         any @ flag_val: ["-DHEALTH_CHARGING_CONTROL_CHARGING_PATH=\"" + flag_val + "\""],
         default: [],

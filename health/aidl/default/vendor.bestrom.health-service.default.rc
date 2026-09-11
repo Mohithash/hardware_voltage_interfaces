@@ -1,0 +1,4 @@
+service vendor.bestrom_health /vendor/bin/hw/vendor.bestrom.health-service.default
+    class hal
+    user system
+    group system
